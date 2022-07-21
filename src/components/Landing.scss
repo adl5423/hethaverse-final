@@ -1,0 +1,349 @@
+@import "./src/assets/index.scss";
+
+.home-container {
+    background: linear-gradient(-132deg, $third, $fourth, $five);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    overflow: hidden;
+    max-height: 80vh;
+    display: flex;
+    //flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //object-fit: contain;
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.doctor {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.financial-advisor {
+    width: 100%;
+    position: relative;
+    top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.landing-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.landing-logo {
+    padding-right: 5px;
+
+    svg {
+        fill: $white;
+        height: 110px;
+        width: 30px;
+    }
+}
+
+.landing-logo-text {
+    font-family: "Share Tech";
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.center-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.healthcare {
+    font-family: "Share Tech";
+    color: $white;
+    text-transform: uppercase;
+    font-size: 80px;
+    position: relative;
+    bottom: 25px;
+    right: 150px;
+    animation: fadeIn 1s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.wealthcare {
+    font-family: "Share Tech";
+    color: $white;
+    text-transform: uppercase;
+    font-size: 80px;
+    text-align: right;
+    position: relative;
+    top: 25px;
+    left: 150px;
+    animation: fadeIn 2s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.slogan {
+    font-family: "Share Tech";
+    color: $white;
+    text-transform: uppercase;
+    font-size: 28px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 3s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.superior-info {
+    position: relative;
+    bottom: 25px;
+}
+
+.inferior-info {
+    position: relative;
+    top: 75px;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+@media screen and (min-width: 1760px) {
+    .doctor {
+        padding-right: 260px;
+    }
+
+    .financial-advisor {
+        padding-left: 260px;
+    }
+
+    .healthcare {
+        right: 300px;
+    }
+
+    .wealthcare {
+        left: 250px;
+    }
+}
+
+@media screen and (max-width: 1759px) {
+    .doctor {
+        padding-right: 40px;
+    }
+
+    .financial-advisor {
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .healthcare {
+        font-size: 60px;
+    }
+
+    .wealthcare {
+        font-size: 60px;
+        left: 170px;
+    }
+
+    .slogan {
+        font-size: 22px;
+    }
+
+    .landing-logo {
+        svg {
+            fill: $white;
+            height: 90px;
+            width: 30px;
+        }
+    }
+
+    .landing-logo-text {
+        font-size: 30px;
+    }
+
+    .doctor {
+        padding-right: 0;
+    }
+
+    .financial-advisor {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 1196px) {
+    .healthcare {
+        font-size: 50px;
+        right: 130px;
+    }
+
+    .wealthcare {
+        font-size: 50px;
+        left: 150px;
+    }
+
+    .slogan {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1092px) {
+    .healthcare {
+        font-size: 45px;
+    }
+
+    .wealthcare {
+        font-size: 45px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .landing-logo-text {
+        font-size: 20px;
+    }
+
+    .inferior-info {
+        top: 55px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .doctor,
+    .financial-advisor {
+        width: 30%;
+    }
+
+    .healthcare {
+        right: 100px;
+        top: 30px;
+    }
+
+    .wealthcare {
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .doctor,
+    .financial-advisor {
+        display: none;
+    }
+
+    .main-container {
+        justify-content: center;
+        width: none;
+    }
+
+    .home-container {
+        max-height: none;
+        min-height: 80vh;
+    }
+
+    .superior-info {
+        bottom: 0;
+    }
+
+    .inferior-info {
+        top: 75px;
+    }
+
+    .healthcare {
+        font-size: 60px;
+        top: 0;
+        right: 0;
+        text-align: center;
+        padding: 0 30px 0 30px;
+    }
+
+    .wealthcare {
+        font-size: 60px;
+        top: none;
+        left: 0;
+        text-align: center;
+        padding: 0 30px 0 30px;
+    }
+
+    .slogan {
+        font-size: 30px;
+    }
+
+    .landing-logo-text {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .healthcare,
+    .wealthcare {
+        font-size: 40px;
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    .landing-logo-text {
+        font-size: 30px;
+    }
+}

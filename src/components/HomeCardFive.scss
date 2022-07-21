@@ -1,0 +1,83 @@
+@import "./src/assets/index.scss";
+
+.card-five-container {
+    overflow: hidden;
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.five-photo-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+}
+
+.security {
+    object-fit: fill;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+}
+
+.five-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+    background-color: $primary-two;
+}
+
+.card-five-title {
+    font-family: "Share Tech";
+    color: $white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.card-five-desc {
+    font-family: "Share Tech";
+    color: $white;
+    font-size: 26px;
+    text-align: left;
+    padding: 15px 100px 0 100px;
+}
+
+@media screen and (max-width: 960px) {
+    .card-five-container {
+        flex-direction: column;
+    }
+
+    .card-five-desc {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .five-photo-section,
+    .security {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .card-five-title {
+        font-size: 20px;
+    }
+
+    .card-five-desc {
+        font-size: 12px;
+    }
+}
