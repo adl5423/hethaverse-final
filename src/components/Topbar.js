@@ -41,12 +41,13 @@ function Topbar() {
                         </div>
 
                         <div className='menu-icon' onClick={handleClick}>
-                            {/* <i className={click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} /> */}
-                            {click ? (
+                            {/* <i className='fa-solid fa-bars' /> */}
+                            {/* {click ? (
                                 <XBar />
                             ) : (
                                 <Bars />
-                            )}
+                            )} */}
+                            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                         </div>
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
